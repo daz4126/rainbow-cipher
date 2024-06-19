@@ -47,8 +47,6 @@ surge({
     $._key = pickRandom(keys).toUpperCase()
     $._word = pickRandom(words).toUpperCase()
     $._remainingWords = words.filter(w => w !== $._word)
-    console.log($._word)
-    console.log($._key)
     $.word.value = encrypt($._word,$._key)
   },
   clue: $ => e => {
@@ -61,8 +59,7 @@ surge({
     const letter = char === "J" ? "I" : char
     const cipher = $._key + [...alphabet].filter(x => !$._key.includes(x)).join``
     const index = cipher.indexOf(letter)
-    const cell = $.table.querySelectorAll("input")[index]
-    cell.value = e.target.value
+    $.table.querySelectorAll("input")[index] = e.target.value
   },
   updateSolution: $ => e => {
     const array = encrypt($._word,$._key).split("  ")
@@ -76,7 +73,7 @@ surge({
     })
   },
     check: $ => e => {
-           const correctLetters = Array.from($.solution.childNodes).reduce((sum,node,i) => sum + (node.value.toUpperCase() === $._word[i] ? 1 : 0),0)
+     const correctLetters = Array.from($.solution.childNodes).reduce((sum,node,i) => sum + (node.value.toUpperCase() === $._word[i] ? 1 : 0),0)
      $.correct.value = correctLetters
      if(correctLetters === 5){
          jsConfetti.addConfetti()
