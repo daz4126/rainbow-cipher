@@ -1,6 +1,6 @@
 {
 
-  "name": "numble",
+  "name": "fruit and veg cipher",
 
   "source": "src/index.html",
 
@@ -14,7 +14,7 @@
 
   "dependencies": {
 
-    "nanny-state": "^3.0.2"
+    "@daz4126/surge": "^6.0.0"
 
   },
 
