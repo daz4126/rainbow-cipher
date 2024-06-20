@@ -21,13 +21,13 @@ main{
   text-align: center;
 }
 
-.red{ color: var(--red)};
-.orange{ color: var(--orange)};
-.yellow{ color: var(--yellow)};
-.green{ color: var(--green)};
-.blue{ color: var(--blue)};
-.pink{ color: var(--pink)};
-.purple{ color: var(--purple)};
+.red{ color: var(--red);}
+.orange{ color: var(--orange);}
+.yellow{ color: var(--yellow);}
+.green{ color: var(--green);}
+.blue{ color: var(--blue);}
+.pink{ color: var(--pink);}
+.purple{ color: var(--purple);}
 
 #logo{
   font-family: "Special Elite";
