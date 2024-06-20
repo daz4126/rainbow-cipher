@@ -8,8 +8,8 @@ const jsConfetti = new JSConfetti()
 
 const keys = words.filter(word => word.length === new Set([...word]).size)
 const alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
-const fruit = ["🍏","🍌","🍒","🍉","🍑"]
-const veg =  ["🥦","🍆","🥔","🍄","🥕"]
+const fruit = ["🔴","🟡","🟢","🔵","🟣"]
+const veg =  ["🟥","🟨","🟩","🟦","🟪"]
 
 const encrypt = (word,key) => [...word].map(letter => {
   const char = letter === "J" ? "I" : letter
