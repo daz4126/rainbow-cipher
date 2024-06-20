@@ -14,11 +14,20 @@
   --blue: #00f7f7;
   --OGreen: #295539;
   --FMauve: #9575cd;
+  --purple: #9575cd;
 }
 
 main{
   text-align: center;
 }
+
+.red{ color: var(--red);
+.orange{ color: var(--orange);
+.yellow{ color: var(--yellow);
+.green{ color: var(--green);
+.blue{ color: var(--blue);
+.pink{ color: var(--pink);
+.purple{ color: var(--purple);
 
 #logo{
   font-family: "Special Elite";
@@ -27,6 +36,7 @@ main{
   color: var(--red);
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 h2{
