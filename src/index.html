@@ -9,54 +9,71 @@
         <script type="module" src="app.js"></script>
     </head>
     <body>
-<h1 id="logo">🌈Rainbow Cipher🌈</h1>
-<main data-surge>
-  <section id="instructions">
-    <h2>Mission:</h2>
-    <p> Decrypt the secret enemy code word</p>
-    <button data-action="start">Break the Code</button>
-    <h2>Top secret intelligence: </h2>
-    <p> The enemy are using coloured shapes to send secret messages.</p>
-     <p> The code is made by writing a 5-letter keyword on the first row of a 5 x 5 grid then writing the rest of the alphabet after (note that I and J are considered the same letter).</p>
-    <p> Example: if the keyword was "RADIO", the cipher grid would look like this</p>
-    <table>
-      <thead>
-      <td></td>
-      <td>🟥</td>
-      <td>🟨</td>
-      <td>🟩</td>
-      <td>🟦</td>
-      <td>🟪</td>
-    </thead>
-      <tr><td>🔴</td><td>R</td><td>A</td><td>D</td><td>I</td><td>O</td></tr>
-      <tr><td>🟡</td><td>B</td><td>C</td><td>E</td><td>F</td><td>G</td></tr>
-      <tr><td>🟢</td><td>H</td><td>K</td><td>L</td><td>M</td><td>N</td></tr>
-      <tr><td>🔵</td><td>P</td><td>Q</td><td>S</td><td>T</td><td>U</td></tr>
-      <tr><td>🟣</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</tr>
-    </table>
-    <p>Example: "O" = 🔴🟪 "G" = 🟡🟪</p>
-    <p>Luckily some of our best analysts have been able to find some 5-letter words and the encryption to help.</p>
-    <p>Example: PRIDE = 🔵🟥 🔴🟥 🔴🟦 🔴🟩 🟡🟩</p>
-    <p> Be careful though - every clue generated will alert the enemy.</p>
-    <h2> Good Luck!</h2>
-    <button data-action="start">Break the Code</button>
-  </section>
-  <section id="game" hidden>
-  <h1 id="word"></h1>
-  
-  <h1 id="solution"><input class="letter" id="letter-0" data-action="updateGrid"><input class="letter" id="letter-1" data-action="updateGrid"><input class="letter" id="letter-2" data-action="updateGrid"><input class="letter" id="letter-3" data-action="updateGrid"><input class="letter" id="letter-4" data-action="updateGrid"></h1>
-    <h1>Score: <strong id="score">10</strong></h1>
-  <button data-action="check">Check Answer</button>
-  <p>You have <strong id="correct">0</strong> correct letters.</p>
-    <button data-action="clear">Clear Grid</button>
-<div id="table"></div>
-  
-<button data-action="clue">Clue</button>
-<div id="clues">
-  </section>
-    <section id="gameOver" hidden>
-      <h1 id="message">Well Done, you cracked the code!</h1>
-      <p>Your score was <strong id="finalScore"></strong>.</p>
-      <button data-action="start">Play Again</button?
-    </section>
-</main>
+    <h1 id="logo">
+       🌈
+      <span class="red">R</span>
+      <span class="orange">a</span>
+      <span class="yellow">i</span>
+      <span class="green">n</span>
+      <span class="blue">b</span>
+      <span class="purple">o</span>
+      <span class="pink">w </span>
+      <span class="red">C</span>
+      <span class="orange">i</span>
+      <span class="yellow">p</span>
+      <span class="green">h</span>
+      <span class="blue">e</span>
+      <span class="purple">r</span>
+      🌈
+    </h1>
+    <main data-surge>
+      <section id="instructions">
+        <h2>Mission:</h2>
+        <p> Decrypt the secret enemy code word</p>
+        <button data-action="start">Break the Code</button>
+        <h2>Top secret intelligence: </h2>
+        <p> The enemy are using coloured shapes to send secret messages.</p>
+         <p> The code is made by writing a 5-letter keyword on the first row of a 5 x 5 grid then writing the rest of the alphabet after (note that I and J are considered the same letter).</p>
+        <p> Example: if the keyword was "RADIO", the cipher grid would look like this</p>
+        <table>
+          <thead>
+          <td></td>
+          <td>🟥</td>
+          <td>🟨</td>
+          <td>🟩</td>
+          <td>🟦</td>
+          <td>🟪</td>
+        </thead>
+          <tr><td>🔴</td><td>R</td><td>A</td><td>D</td><td>I</td><td>O</td></tr>
+          <tr><td>🟡</td><td>B</td><td>C</td><td>E</td><td>F</td><td>G</td></tr>
+          <tr><td>🟢</td><td>H</td><td>K</td><td>L</td><td>M</td><td>N</td></tr>
+          <tr><td>🔵</td><td>P</td><td>Q</td><td>S</td><td>T</td><td>U</td></tr>
+          <tr><td>🟣</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</tr>
+        </table>
+        <p>Example: "O" = 🔴🟪 "G" = 🟡🟪</p>
+        <p>Luckily some of our best analysts have been able to find some 5-letter words and the encryption to help.</p>
+        <p>Example: PRIDE = 🔵🟥 🔴🟥 🔴🟦 🔴🟩 🟡🟩</p>
+        <p> Be careful though - every clue generated will alert the enemy.</p>
+        <h2> Good Luck!</h2>
+        <button data-action="start">Break the Code</button>
+      </section>
+      <section id="game" hidden>
+      <h1 id="word"></h1>
+      
+        <h1 id="solution"><input class="letter" id="letter-0" data-action="updateGrid"><input class="letter" id="letter-1" data-action="updateGrid"><input class="letter" id="letter-2" data-action="updateGrid"><input class="letter" id="letter-3" data-action="updateGrid"><input class="letter" id="letter-4" data-action="updateGrid"></h1>
+        <h1>Score: <strong id="score">10</strong></h1>
+        <button data-action="check">Check Answer</button>
+        <p>You have <strong id="correct">0</strong> correct letters.</p>
+        <button data-action="clear">Clear Grid</button>
+        <div id="table"></div>
+        <button data-action="clue">Clue</button>
+        <div id="clues">
+        </section>
+        <section id="gameOver" hidden>
+          <h1 id="message">Well Done, you cracked the code!</h1>
+          <p>Your score was <strong id="finalScore"></strong>.</p>
+          <button data-action="start">Play Again</button?
+        </section>
+    </main>
+  </body>
+</html>
