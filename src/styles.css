@@ -7,14 +7,15 @@
   --black: #222;
   --grey: #999;
   --lightgrey: #b2b2b2;
-  --pink: #f40099;
-  --red: #c00;
-  --yellow: #f5e43c;
-  --green: #0c0;
-  --blue: #00f7f7;
+  --red: #c20000;
+    --blue: #0099dd;
+    --green: #3c8562;
+    --yellow: #f6e548;
+    --orange: #ff6900;
+    --pink: #ffb3db;
+    --purple: #5f52a1;
   --OGreen: #295539;
   --FMauve: #9575cd;
-  --purple: #9575cd;
 }
 
 main{
