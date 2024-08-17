@@ -92,7 +92,7 @@ surge({
      }
   },
   clear: $ =>  Array.from($.table.querySelectorAll("input")).forEach(cell => cell.value = ""),
-  initialize: $ => {
+  connect: $ => {
     [$._url,$._id] = window.location.href.split("#")
   }
 })
