@@ -44,6 +44,7 @@ surge({
     $.score.value = 10
     $.correct.value = 0
     $.table.append(table)
+    console.log($._id)
     $._key = ($._id ? keys[$._id] : pickRandom(keys)).toUpperCase()
     $._id = null
     $._word = pickRandom(words).toUpperCase()
@@ -94,5 +95,6 @@ surge({
   clear: $ =>  Array.from($.table.querySelectorAll("input")).forEach(cell => cell.value = ""),
   connect: $ => {
     [$._url,$._id] = window.location.href.split("#")
+    console.log($._id)
   }
 })
