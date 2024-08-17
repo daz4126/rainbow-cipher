@@ -44,9 +44,8 @@ surge({
     $.score.value = 10
     $.correct.value = 0
     $.table.append(table)
-    const [url,id] = window.location.href.split("#")
-    window.location.href = url
-    $._key = id || pickRandom(keys).toUpperCase()
+    $._key = ($._id ? keys[$._id] : pickRandom(keys)).toUpperCase()
+    $._id = null
     $._word = pickRandom(words).toUpperCase()
     $._remainingWords = words.filter(w => w !== $._word)
     $.word.value = encrypt($._word,$._key)
@@ -92,5 +91,8 @@ surge({
        $.message.value = "Hard luck, you didn't break the code"
      }
   },
-  clear: $ =>  Array.from($.table.querySelectorAll("input")).forEach(cell => cell.value = "")
+  clear: $ =>  Array.from($.table.querySelectorAll("input")).forEach(cell => cell.value = ""),
+  initialize: $ => {
+    [$._url,$._id] = window.location.href.split("#")
+  }
 })
