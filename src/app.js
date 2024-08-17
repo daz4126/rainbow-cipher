@@ -44,7 +44,7 @@ surge({
     $.score.value = 10
     $.correct.value = 0
     $.table.append(table)
-    console.log($._id)
+    console.log($._id,keys[$._id])
     $._key = ($._id ? keys[$._id] : pickRandom(keys)).toUpperCase()
     $._id = null
     $._word = pickRandom(words).toUpperCase()
