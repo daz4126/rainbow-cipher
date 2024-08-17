@@ -44,7 +44,9 @@ surge({
     $.score.value = 10
     $.correct.value = 0
     $.table.append(table)
-    $._key = pickRandom(keys).toUpperCase()
+    const [url,id] = window.location.href.split("#")
+    window.location.href = url
+    $._key = id || pickRandom(keys).toUpperCase()
     $._word = pickRandom(words).toUpperCase()
     $._remainingWords = words.filter(w => w !== $._word)
     $.word.value = encrypt($._word,$._key)
